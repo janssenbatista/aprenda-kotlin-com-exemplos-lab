@@ -19,8 +19,12 @@ data class Usuario(private val nome: String, private val idade: Byte) {
     }
 
     override fun toString(): String {
-        return "Usuario(nome='$nome', idade='$idade', numeroDaMatricula=$numeroDaMatricula, " +
-                "dataInscricao=${FormatadorDeData.formatarData(data = this.dataInscricao)})"
+        return """Usuario(
+            Nome = '$nome', 
+            Idade = '$idade', 
+            Número da Matrícula = $numeroDaMatricula,
+            Data da Inscrição = ${FormatadorDeData.formatarData(data = this.dataInscricao)})
+            """.trimIndent()
     }
 
     companion object {

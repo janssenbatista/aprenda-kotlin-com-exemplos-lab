@@ -9,12 +9,16 @@ data class Formacao(
 
     private val inscritos = mutableListOf<Usuario>()
 
+    private fun listarConteudos(): Unit = conteudos.forEach {
+        println("$it\n")
+    }
+
 
     override fun toString(): String {
         return """Nome da Formação: $nome
             Conteúdos: $conteudos
             Usuários Inscritos: $inscritos
-        """.trimIndent()
+        """.trimMargin()
     }
 
     @Throws(UsuarioJaInscritoException::class)

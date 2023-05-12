@@ -25,12 +25,12 @@ data class ConteudoEducacional(
     }
 
     override fun toString(): String {
-        return "ConteudoEducacional(" +
-                "nome='$nome', " +
-                "duração=${duration.toMinutes()} minutos, " +
-                "dataDeCriacao=${FormatadorDeData.formatarData(data = dataDeCriacao)}" +
-                ")"
+        return """ConteudoEducacional(
+                Nome='$nome',
+                Nível de dificuldade: ${nivelDeDificuldade.descricao}
+                Duração=${duracao.toMinutes()} minutos,
+                Data de Criação=${FormatadorDeData.formatarData(data = dataDeCriacao)}
+                )""".trimMargin()
     }
-
 
 }

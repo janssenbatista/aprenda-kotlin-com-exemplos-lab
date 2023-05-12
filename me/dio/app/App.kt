@@ -11,11 +11,15 @@ fun main() {
     val usuario2 = Usuario("Usuário 2", 38)
     val usuario3 = Usuario("Usuário 3", 16)
 
-    val conteudoEducacional1 = ConteudoEducacional("Conteudo Educacional 1", Duration.ofMinutes(15))
-    val conteudoEducacional2 = ConteudoEducacional("Conteudo Educacional 2", Duration.ofMinutes(22))
-    val conteudoEducacional3 = ConteudoEducacional("Conteudo Educacional 3", Duration.ofMinutes(10))
-    val conteudoEducacional4 = ConteudoEducacional("Conteudo Educacional 4", Duration.ofMinutes(30))
-    val conteudoEducacional5 = ConteudoEducacional("Conteudo Educacional 5")
+    val conteudoEducacional1 =
+        ConteudoEducacional("Conteudo Educacional 1", nivelDeDificuldade = Nivel.BASICO, Duration.ofMinutes(15))
+    val conteudoEducacional2 =
+        ConteudoEducacional("Conteudo Educacional 2", nivelDeDificuldade = Nivel.INTERMEDIARIO, Duration.ofMinutes(22))
+    val conteudoEducacional3 =
+        ConteudoEducacional("Conteudo Educacional 3", nivelDeDificuldade = Nivel.AVANCADO, Duration.ofMinutes(10))
+    val conteudoEducacional4 =
+        ConteudoEducacional("Conteudo Educacional 4", nivelDeDificuldade = Nivel.BASICO, Duration.ofMinutes(30))
+    val conteudoEducacional5 = ConteudoEducacional("Conteudo Educacional 5", nivelDeDificuldade = Nivel.BASICO)
 
     val formacao1 = Formacao("Formação 1", listOf(conteudoEducacional1, conteudoEducacional3))
     val formacao2 = Formacao(
@@ -42,6 +46,6 @@ fun main() {
         System.err.println(e.message)
     }
 
-    println(formacao1)
+    println(formacao1.toString())
     println(formacao2)
 }
