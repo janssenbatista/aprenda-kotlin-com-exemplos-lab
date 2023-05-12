@@ -1,12 +1,14 @@
 package me.dio.app.models
 
+import me.dio.app.Nivel
 import me.dio.app.utils.FormatadorDeData
 import java.time.Duration
 import java.time.LocalDate
 
 data class ConteudoEducacional(
     val nome: String,
-    val duration: Duration = Duration.ofMinutes(60)
+    val nivelDeDificuldade: Nivel,
+    val duracao: Duration = Duration.ofMinutes(60)
 ) {
 
     val dataDeCriacao: LocalDate = LocalDate.now()
